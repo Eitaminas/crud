@@ -17,10 +17,10 @@ body{
 }
 
 .laukas{
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    display: table;
-    margin-left: 811px;
+    width: 16%;
 }
 
 .fontSize{

@@ -19,7 +19,9 @@
                 <form action="db.php" method="post">
                     <div for="ID" class="fontSize">
                         <label class="idClass">ID</label>
-                        <input type="number" autocomplete="off" class="forma" id="ID" placeholder="ID" name="id">
+                        <?php while ($showMaxId = mysqli_fetch_row($maxId)) { ?>
+                        <input type="number" autocomplete="off" class="forma" id="ID" placeholder="ID" name="id" value="<?php echo $showMaxId['id'] ?>">
+                        <?php } ?>
                     </div>
                     <div for="laukasA" class="fontSize">
                         <label>Laukas A</label>
@@ -36,7 +38,7 @@
                 
                     </div>
                     <div class="mygtukai">
-                        <button class="mygtukas" name="sukurti" type="submit">Sukurti</button>
+                        <button class="mygtukas" name="create" type="submit">Sukurti</button>
                         <button class="mygtukas" name="update" type="submit">Atnaujinti</button>
                         <button class="mygtukas" name="delete" type="sumbit">Ištrinti</button>
                     </div>
@@ -51,12 +53,12 @@
                         <th>Laukas C</th>
                         <th>Veiksmas</th>
                     </tr>
-                    <?php while ($row = mysqli_fetch_array($data)) { ?>
+                    <?php while ($eilute = mysqli_fetch_array($data)) { ?>
                     <tr>
-                        <td><?php echo $row['id'] ?></td>
-                        <td><?php echo $row['laukasA'] ?></td>
-                        <td><?php echo $row['laukasB'] ?></td>
-                        <td><?php echo $row['laukasC'] ?></td>
+                        <td><?php echo $eilute['id'] ?></td>
+                        <td><?php echo $eilute['laukasA'] ?></td>
+                        <td><?php echo $eilute['laukasB'] ?></td>
+                        <td><?php echo $eilute['laukasC'] ?></td>
                     </tr>
                     <?php } ?>
                 </table>

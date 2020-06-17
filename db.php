@@ -28,4 +28,6 @@ if($db -> query($query) === TRUE){
 
 $data = mysqli_query($db, "SELECT * FROM info");
 
+$maxId = 
+$maxId = mysqli_query($db, "SELECT max(id)+1 AS id FROM info");
 ?>
