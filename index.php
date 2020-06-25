@@ -39,8 +39,6 @@
                     </div>
                     <div class="mygtukai">
                         <button class="mygtukas" name="create" type="submit">Sukurti</button>
-                        <button class="mygtukas" name="update" type="submit">Atnaujinti</button>
-                        <button class="mygtukas" name="delete" type="sumbit">Ištrinti</button>
                     </div>
                 </form>
             </div>
@@ -59,6 +57,12 @@
                         <td><?php echo $eilute['laukasA'] ?></td>
                         <td><?php echo $eilute['laukasB'] ?></td>
                         <td><?php echo $eilute['laukasC'] ?></td>
+                        <div>
+                            <td>
+                                <button name="update" type="submit">Atnaujinti</button>
+                                <button name="delete" type="submit">Ištrinti</button>
+                            </td>
+                        </div>
                     </tr>
                     <?php } ?>
                 </table>
